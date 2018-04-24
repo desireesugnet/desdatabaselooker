@@ -8,7 +8,7 @@ include: "*.dashboard"
 
 datagroup: desiree_s_model_project_default_datagroup {
   # sql_trigger: SELECT MAX(id) FROM etl_log;;
-  max_cache_age: "1 hour"
+  max_cache_age: "4 hours"
 }
 
 persist_with: desiree_s_model_project_default_datagroup
@@ -58,7 +58,3 @@ explore: user_data {
     relationship: many_to_one
   }
 }
-
-explore: users {}
-
-explore: users_nn {}
