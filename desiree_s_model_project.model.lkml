@@ -36,6 +36,11 @@ explore: order_items {
     sql_on: ${order_items.order_id}= ${user_data.id} ;;
     relationship: many_to_one
   }
+  join: schema_migrations {
+    type: left_outer
+    sql_on: ${order_items.order_id}= ${schema_migrations.filename} ;;
+    relationship: many_to_many
+  }
 }
 
 explore: orders {
